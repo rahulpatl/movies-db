@@ -14,10 +14,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
     window = UIWindow(frame: UIScreen.main.bounds)
-    
+    showRoot()
     return true
   }
   
+  func showRoot() {
+    let vc = MoviesBuilder().buildModule()
+    let nc = UINavigationController(rootViewController: vc)
+    window?.rootViewController = nc
+    window?.makeKeyAndVisible()
+  }
 
 }
 
