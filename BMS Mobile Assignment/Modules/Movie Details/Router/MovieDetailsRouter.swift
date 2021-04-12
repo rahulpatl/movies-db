@@ -1,21 +1,16 @@
 //
-//  MoviesRouter.swift
+//  MovieDetailsRouter.swift
 //  BMS Mobile Assignment
 //
-//  Created by Rahul Patil on 11/04/21.
+//  Created by Rahul Patil on 12/04/21.
 //
 
 import UIKit
 
-class MoviesRouter: MoviesRouterInput {
+class MovieDetailsRouter: MovieDetailsRouterInput {
   weak var viewController: UIViewController?
-  
-  func showDetails(for movie: Movie) {
+  func showMovieDetails(with movie: Movie) {
     let vc = MovieDetailsBuilder().buildModule(with: movie)
     viewController?.navigationController?.pushViewController(vc, animated: true)
-  }
-  
-  func openSearchView(with movies: [Movie]) {
-    
   }
 }

@@ -25,9 +25,7 @@ class MoviesVC: UIViewController {
   lazy var collectionViewLayout: UICollectionViewFlowLayout = {
     let layout = UICollectionViewFlowLayout()
     let spacing = Constants.defaultSpacing
-    let cellWidth: CGFloat = (UIScreen.main.bounds.width / Constants.numberOfColumns) - (Constants.numberOfColumns - spacing) - 2
-    let cellHeight: CGFloat = (cellWidth * 1.5) - Constants.defaultPadding
-    layout.itemSize = CGSize(width: cellWidth, height: cellHeight)
+    layout.itemSize = Constants.getMovieCellSize()
     layout.minimumInteritemSpacing = spacing
     layout.minimumLineSpacing = spacing
     layout.sectionInset = UIEdgeInsets(top: spacing, left: spacing, bottom: spacing, right: spacing)
@@ -60,7 +58,6 @@ class MoviesVC: UIViewController {
     collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
     collectionView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
     collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
-    
     let searchButton = UIBarButtonItem(image: UIImage(with: .SEARCH), style: .plain, target: self, action: #selector(searchTapped))
     navigationItem.rightBarButtonItem = searchButton
   }

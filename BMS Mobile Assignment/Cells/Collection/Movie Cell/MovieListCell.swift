@@ -23,7 +23,7 @@ class MovieListCell: UICollectionViewCell {
   }
   
   func updateMovie(of data: Movie) {
-//    moviePoster.image = nil
+    moviePoster.image = nil
     movieName.text = data.title
     if let value = data.poster_path {
       moviePoster.setImg(from: value)
