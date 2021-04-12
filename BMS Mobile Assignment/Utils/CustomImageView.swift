@@ -19,11 +19,13 @@ class CustomImageView: UIImageView {
     
     if let value = urlString {
       network.request(value) { (result) in
-        switch result {
-        case let .success(response):
-          self.set(imgData: response!, for: value.description)
-        case .failure(_):
-          self.image = nil
+        DispatchQueue.main.async {
+          switch result {
+          case let .success(response):
+            self.set(imgData: response!, for: value.description)
+          case .failure(_):
+            self.image = nil
+          }
         }
       }
     }
