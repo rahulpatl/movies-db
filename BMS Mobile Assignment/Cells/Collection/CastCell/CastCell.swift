@@ -23,7 +23,7 @@ class CastCell: UICollectionViewCell {
   }
   
   func setCast(data: Cast) {
-    castImage.image = nil
+    castImage.image = UIImage(with: .USER)
     if let value = data.profile_path {
       castImage.setImg(from: value)
     }

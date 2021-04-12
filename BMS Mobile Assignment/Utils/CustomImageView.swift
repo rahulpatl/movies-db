@@ -24,7 +24,8 @@ class CustomImageView: UIImageView {
           case let .success(response):
             self.set(imgData: response!, for: value.description)
           case .failure(_):
-            self.image = nil
+            break
+//            self.image = nil
           }
         }
       }

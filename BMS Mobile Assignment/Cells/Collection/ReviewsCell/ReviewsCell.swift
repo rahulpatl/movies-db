@@ -27,7 +27,7 @@ class ReviewsCell: UICollectionViewCell {
   }
   
   func setReview(data: MovieReview) {
-    userImage.image = nil
+    userImage.image = UIImage(with: .USER)
     if let value = data.authorDetails?.avatar_path {
       userImage.setImg(from: value)
     }

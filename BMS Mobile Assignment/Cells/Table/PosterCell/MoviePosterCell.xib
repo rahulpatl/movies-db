@@ -20,17 +20,39 @@
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sn3-pC-aQL" customClass="CustomImageView" customModule="BMS_Mobile_Assignment" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="184"/>
                     </imageView>
+                    <view alpha="0.75" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="agQ-H7-Z00">
+                        <rect key="frame" x="0.0" y="142.5" width="320" height="41.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3ta-GP-qDi">
+                                <rect key="frame" x="8" y="8" width="304" height="25.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="21"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="3ta-GP-qDi" secondAttribute="trailing" constant="8" id="I8X-DX-u9k"/>
+                            <constraint firstAttribute="bottom" secondItem="3ta-GP-qDi" secondAttribute="bottom" constant="8" id="Ujc-8z-Z0I"/>
+                            <constraint firstItem="3ta-GP-qDi" firstAttribute="leading" secondItem="agQ-H7-Z00" secondAttribute="leading" constant="8" id="WfK-Dp-7F3"/>
+                            <constraint firstItem="3ta-GP-qDi" firstAttribute="top" secondItem="agQ-H7-Z00" secondAttribute="top" constant="8" id="rL8-Sh-Td7"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <constraints>
                     <constraint firstItem="sn3-pC-aQL" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="3Xj-oj-CyE"/>
                     <constraint firstItem="sn3-pC-aQL" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="8rx-qe-BPA"/>
+                    <constraint firstAttribute="trailing" secondItem="agQ-H7-Z00" secondAttribute="trailing" id="A5d-ge-6VK"/>
                     <constraint firstAttribute="trailing" secondItem="sn3-pC-aQL" secondAttribute="trailing" id="VPx-KT-fhR"/>
+                    <constraint firstItem="agQ-H7-Z00" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="cmM-cx-u0L"/>
                     <constraint firstAttribute="bottom" secondItem="sn3-pC-aQL" secondAttribute="bottom" id="gAd-Ft-kBc"/>
+                    <constraint firstAttribute="bottom" secondItem="agQ-H7-Z00" secondAttribute="bottom" id="oqD-J3-n3x"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="posterImage" destination="sn3-pC-aQL" id="MSA-OW-iBq"/>
+                <outlet property="titleLabel" destination="3ta-GP-qDi" id="Inz-11-9Mx"/>
             </connections>
             <point key="canvasLocation" x="131.8840579710145" y="140.625"/>
         </tableViewCell>

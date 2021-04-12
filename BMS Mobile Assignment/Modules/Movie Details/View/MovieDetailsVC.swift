@@ -108,8 +108,9 @@ extension MovieDetailsVC: UITableViewDelegate, UITableViewDataSource {
     switch indexPath.section {
     case 0://Poster
       let cell = tableView.dequeueReusableCell(withIdentifier: MoviePosterCell.reuseId, for: indexPath) as? MoviePosterCell
-      if let value = movieDetailsViewModel?.synopsis?.backdrop_path {
-        cell?.setPoster(url: value)
+      
+      if let value = movieDetailsViewModel?.synopsis {
+        cell?.update(data: value)
       }
       return cell!
       

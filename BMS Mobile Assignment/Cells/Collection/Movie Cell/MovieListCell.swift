@@ -11,6 +11,7 @@ class MovieListCell: UICollectionViewCell {
   @IBOutlet weak var childView: UIView!
   @IBOutlet weak var movieName: UILabel!
   @IBOutlet weak var moviePoster: CustomImageView!
+  @IBOutlet weak var bookButton: UIButton!
   static let reuseId = "MovieListCell"
   
   override func awakeFromNib() {
@@ -20,6 +21,7 @@ class MovieListCell: UICollectionViewCell {
   
   private func prepareUI() {
     childView.layer.cornerRadius = Constants.defaultRadius
+    bookButton.layer.cornerRadius = Constants.defaultRadius
   }
   
   func updateMovie(of data: Movie) {

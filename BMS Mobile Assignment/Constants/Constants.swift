@@ -16,6 +16,7 @@ enum Constants {
   static let defaultPageNum: Int = 0
   static let defaultTotalCount: Int = 0
   static let defaultPageSize: Int = 20
+  static let SearchPlaceholder = "Search"
   static func getMovieCellSize() -> CGSize {
     let spacing = Constants.defaultSpacing
     let cellWidth: CGFloat = (UIScreen.main.bounds.width / Constants.numberOfColumns) - (Constants.numberOfColumns - spacing) - 2
@@ -28,6 +29,7 @@ enum Constants {
 
 enum Images: String {
   case SEARCH = "Search"
+  case USER = "User"
 }
 
 enum AlertConstants: String {

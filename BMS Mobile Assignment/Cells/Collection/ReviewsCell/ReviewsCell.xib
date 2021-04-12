@@ -29,6 +29,7 @@
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rLQ-V7-sGL" customClass="CustomImageView" customModule="BMS_Mobile_Assignment" customModuleProvider="target">
                                 <rect key="frame" x="8" y="34" width="44" height="44"/>
+                                <color key="backgroundColor" systemColor="systemGray2Color"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="44" id="S1B-c1-4na"/>
                                     <constraint firstAttribute="height" constant="44" id="pZV-dZ-ChC"/>
@@ -44,7 +45,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" systemColor="systemGray5Color"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="sdL-eb-Oao" secondAttribute="trailing" constant="4" id="3rL-BK-uRJ"/>
                                     <constraint firstItem="sdL-eb-Oao" firstAttribute="top" secondItem="GR3-84-8Xd" secondAttribute="top" constant="4" id="efm-j2-P2J"/>
@@ -53,7 +54,7 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" systemColor="systemGray3Color"/>
                         <constraints>
                             <constraint firstItem="GR3-84-8Xd" firstAttribute="top" secondItem="rLQ-V7-sGL" secondAttribute="top" id="7fX-jR-4m2"/>
                             <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="rLQ-V7-sGL" secondAttribute="bottom" constant="8" id="8op-uu-ooy"/>
@@ -88,8 +89,14 @@
         </collectionViewCell>
     </objects>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray3Color">
+            <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

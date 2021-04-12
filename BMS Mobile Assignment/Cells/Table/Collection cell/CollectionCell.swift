@@ -34,6 +34,7 @@ class CollectionCell: UITableViewCell {
   }
   
   private func setupViews() {
+    selectionStyle = .none
     collectionView.delegate = self
     collectionView.dataSource = self
     collectionView.registerCellWith(nibName: CastCell.reuseId)

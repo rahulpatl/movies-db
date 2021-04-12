@@ -16,6 +16,7 @@ class MoviesRouter: MoviesRouterInput {
   }
   
   func openSearchView(with movies: [Movie]) {
-    
+    let vc = SearchMoviesBuilder().builder(movies: movies)
+    viewController?.navigationController?.pushViewController(vc, animated: true)
   }
 }

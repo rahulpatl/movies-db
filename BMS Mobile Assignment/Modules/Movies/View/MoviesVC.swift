@@ -38,12 +38,18 @@ class MoviesVC: UIViewController {
     collectionView.delegate = self
     collectionView.register(UINib(nibName: MovieListCell.reuseId, bundle: nil), forCellWithReuseIdentifier: MovieListCell.reuseId)
     collectionView.translatesAutoresizingMaskIntoConstraints = false
+    collectionView.backgroundColor = .clear
     return collectionView
   }()
   
   //MARK: ViewController Lifecycle.
   override func loadView() {
     view = UIView()
+    if #available(iOS 13.0, *) {
+      view.backgroundColor = .systemBackground
+    } else {
+      view.backgroundColor = .white
+    }
   }
   
   override func viewDidLoad() {
@@ -53,6 +59,7 @@ class MoviesVC: UIViewController {
   }
   
   private func setupViews() {
+    title = "Movies"
     view.addSubview(collectionView)
     collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
     collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
