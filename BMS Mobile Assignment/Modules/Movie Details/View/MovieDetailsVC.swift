@@ -63,7 +63,10 @@ extension MovieDetailsVC: MovieDetailsViewInput {
   }
   
   func showAlertOnFailure(title: String, msg: String) {
-    
+    let alert = UIAlertController(title: title, message: msg, preferredStyle: .alert)
+    let okayAction = UIAlertAction(title: "Okay", style: .cancel) { (_) in}
+    alert.addAction(okayAction)
+    present(alert, animated: true)
   }
 }
 

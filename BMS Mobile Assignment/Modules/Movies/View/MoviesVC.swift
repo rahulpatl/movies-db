@@ -94,11 +94,6 @@ extension MoviesVC: UICollectionViewDelegateFlowLayout, UICollectionViewDataSour
       isNextRequestEnable = false
       presenter.getMovies(for: nextPage)
     }
-    print(list[indexPath.item].title)
-  }
-  
-  func collectionView(_ collectionView: UICollectionView, didEndDisplaying cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-    print(list[indexPath.item].title)
   }
 }
 
